@@ -1,29 +1,89 @@
+/* Perplexity-inspired CSS */
+
+:root {
+    --primary-color: #4784ee;
+    --secondary-color: #f0f4f8;
+    --text-color: #333;
+    --background-color: #ffffff;
+}
+
 body {
-    background-color: #1e1e1e; /* Dark background */
-    color: #e0e0e0; /* Light text color */
-    font-family: Arial, sans-serif; /* Clean, modern font */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
 }
 
-nav {
-    background-color: #333; /* Darker for contrast */
-    padding: 10px;
-    text-align: center;
+header {
+    background-color: var(--secondary-color);
+    padding: 1rem;
 }
 
-nav a {
-    color: #e0e0e0;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
     text-decoration: none;
-    margin: 0 15px;
+    color: var(--text-color);
+    font-weight: bold;
 }
 
-.container {
+nav ul li a.active {
+    color: var(--primary-color);
+}
+
+main {
     max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 h1 {
-    color: #fff;
+    color: var(--primary-color);
+}
+
+.search-container {
+    display: flex;
+    margin-top: 2rem;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px 0 0 4px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+button:hover {
+    background-color: #3a6ac5;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
